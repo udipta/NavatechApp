@@ -1,0 +1,47 @@
+# FastAPI endpoints Tests
+
+### Test root endpoint
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+### Test creating a new organization
+POST http://127.0.0.1:8000/org/create
+Content-Type: application/json
+
+{
+  "name": "Test Organization",
+  "admin_email": "admin@test.com",
+  "admin_password": "securepassword123"
+}
+
+### Test getting organization details
+GET http://127.0.0.1:8000/org/get/Test Organization
+Accept: application/json
+
+### Test creating another organization
+POST http://127.0.0.1:8000/org/create
+Content-Type: application/json
+
+{
+  "name": "Another Org",
+  "admin_email": "admin@anotherorg.com",
+  "admin_password": "anotherpassword456"
+}
+
+### Test getting details of the second organization
+GET http://127.0.0.1:8000/org/get/Another Org
+Accept: application/json
+
+### Test creating an organization with invalid data
+POST http://127.0.0.1:8000/org/create
+Content-Type: application/json
+
+{
+  "name": "",
+  "admin_email": "invalid-email",
+  "admin_password": "short"
+}
+
+### Test getting a non-existent organization
+GET http://127.0.0.1:8000/org/get/Non Existent Org
+Accept: application/json
