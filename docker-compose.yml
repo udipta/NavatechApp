@@ -19,6 +19,7 @@ services:
     build:
       context: ./app
       dockerfile: Dockerfile
+    command: sh -c "./run_migrations.sh && uvicorn main:app --host 0.0.0.0 --port 8000"
     container_name: api
     ports:
       - "8000:8000"

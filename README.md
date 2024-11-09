@@ -22,7 +22,7 @@ This project provides RESTful FastAPIs for organization management where an admi
 - Run below script to set up your system for local development using docker:
 
 ```bash
-./scripts/docker-dev.sh  # Enter password if asked
+./app/scripts/docker-dev.sh  # Enter password when asked
 ```
 
 Now run the below commands to run services in Docker:
@@ -119,5 +119,5 @@ Use [PyEnv](https://github.com/pyenv/pyenv) to install and use Python 3.9.x.
 
 ## API Documentation
 
-http://localhost:8000/docs
+http://dev.navatech.ai:8000/docs
 
